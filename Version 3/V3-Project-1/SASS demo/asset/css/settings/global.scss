@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+     
+    font-family: $monserrat;
+    &.body-hidden{
+        overflow: hidden;
+    }
+}
+
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+input:focus,textarea:focus{
+    outline: none;
+}
+button{
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+}

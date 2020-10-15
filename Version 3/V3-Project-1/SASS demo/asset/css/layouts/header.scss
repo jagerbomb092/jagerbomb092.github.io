@@ -1,0 +1,192 @@
+/*============= Header ============*/
+.header{
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    @include height(auto);
+    & .scroll{
+        padding: initial;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        
+        & .header__top-logo{
+             font-size: 24px;
+        }
+    }
+    &__top{
+        @include display(space-between);
+        padding: 24px 0;
+        font-family: $monserrat;
+        flex-wrap: wrap;
+        font-weight: 700;
+        transition: padding-top 0.3s, padding-bottom 0.3s;
+        & a{
+            color: $white;
+        }
+        &-logo{
+            font-size: 28px;
+            transition: font-size 0.3s;
+        }
+        &-list{
+            @include display(center);
+            & .top-list__item{
+                & .list__item-link{
+                    border-radius: 8px;
+                    
+                }
+                & .color-active{
+                    background-color: $green;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+            
+            & :nth-child(1){
+                & .list__item-link{
+                    font-size: 16px;
+                    padding: 16px;
+                    margin: 0;
+                }
+                margin: 0 4px ;
+            }
+            & :nth-child(2){
+                & .list__item-link{
+                    font-size: 16px;
+                    padding: 16px;
+                    margin: 0;
+                }
+                margin: 0 4px ;
+            }
+            & :nth-child(3){
+                & .list__item-link{
+                    font-size: 16px;
+                    padding: 16px;
+                    margin: 0;
+                }
+                margin: 0 4px ;
+            }
+            & a:hover{
+                color: $green;
+            }
+            
+        }
+        
+        &-btn{
+            display: none;
+            padding: 12.8px;
+            color: $white;
+            font-family: $monserrat;
+            background-color: $green;
+            border:1px solid $green;
+            border-radius: 8px;
+            font-weight: 700;
+            & i{
+                margin-left: 5px;
+            }
+        }
+
+    }
+    
+    
+    @media screen and (max-width:991px){
+        & .scroll{
+            padding: initial;
+            padding-bottom: 16px;
+            padding-top: 16px;
+            
+            & .header__top-logo{
+                 font-size:20px;
+            }
+            
+            
+        }
+        &__top{
+            padding: inherit;
+            padding: 16px 0;
+            &-logo{
+                font-size: 20px;
+            }
+            &-list{
+                flex-basis: 100%;
+                max-height: 0vh;
+                flex-direction: column;
+                text-align: left;
+                overflow: hidden;
+                transition: all ease-in-out 0.4s;
+                
+                & .top-list__item{
+                    & .color-active{
+                        background-color: transparent;
+                        color: $green;
+                       &:hover{
+                           color: $green;
+                       }
+                    }
+                }
+                
+                :nth-child(1){
+                    margin-right: 0px;
+                    font-size: 16px;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    & .list__item-link{
+                        padding: 16px 0;
+                    }
+                }
+                :nth-child(2){
+                    margin-right: 0px;
+                    font-size: 16px;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    & .list__item-link{
+                        padding: 16px 0;
+                    }
+                }
+                :nth-child(3){
+                    font-size: 16px;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    & .list__item-link{
+                        padding: 16px 0;
+                    }
+                }
+            }
+            & .show{
+                max-height: 100vh;
+                margin-top: 16px;
+            }
+            
+            &-btn{
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width:335px){
+        &__top{
+            padding: initial;
+            padding: 16px 0;
+            &-logo{
+                flex-basis: 100%;
+                padding: 5px 0;
+            }
+        }
+        & .scroll{
+            padding: initial;
+            padding-bottom: 0;
+            padding: 16px 0;
+            
+            & .header__top-logo{
+                 font-size:20px;
+            }
+            
+            
+        }
+    }
+}

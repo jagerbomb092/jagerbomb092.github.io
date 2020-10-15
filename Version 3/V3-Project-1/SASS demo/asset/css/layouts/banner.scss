@@ -1,0 +1,53 @@
+/*============= Banner ============*/
+.banner{
+    background-color: $green;
+    @include height(auto);
+    padding-top:200px;
+    padding-bottom: 96px; 
+    color: $white;
+    &__image{
+        width: 240px;
+        margin: auto;
+    }
+    &-title{
+        font-size: 64px;
+        line-height: 56px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: $monserrat;
+        @media screen and (max-width:991px){
+            font-size: 45px;
+            line-height: 44px;
+        }
+    }
+    &-item{
+        @include height(auto);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        &__line{
+            height: 4px;
+            max-width: 112px;
+            width: 100%;
+            background-color: $white;
+            
+        }
+        &__icon{
+            font-size: 32px;
+        }
+    }
+    &-info{
+        text-align: center;
+        font-family: $lato;
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 25px;
+        line-height: 36px;
+        @media screen and (max-width:991px){
+            font-size: 20px;
+            
+        }
+    }
+}

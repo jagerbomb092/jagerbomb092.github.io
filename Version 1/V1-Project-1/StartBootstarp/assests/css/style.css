@@ -1,0 +1,407 @@
+/*
+    Theme Name : Start Bootstrap
+    Theme Description : 
+        - As a user,I want to watch your porfolio
+        - Technology : HTML,CSS
+    Author: Dinh Tuan Nghia
+    Version : 1.0.0
+*/
+/*
+ ==================== Table of content ====================
+ 1, Setting
+ 2, Header
+*/
+/* ================== Setting ==================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* ================== Header =================== */
+.header{
+    height: 80px;
+    background-color: #2c3e50 ;
+    text-transform: uppercase;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+.header .header__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+.header .header__top .button-bar{
+    display: none;
+}
+.header .header__top-logo{
+    
+    font-size: 163%;
+}
+.header .header__top-logo a{
+    color: white;
+}
+.header .header__top-list{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+.header .header__top-list .top-list__item{}
+.header .header__top-list .top-list__item .list__item-link{
+    margin-left: 10px;
+    color: white;
+}
+.header .header__top-list .top-list__item .list__item-link:hover{
+    color: #1abc9c;
+}
+/* ================== Banner =================== */
+.banner{
+    height: auto;
+    background-color: #1abc9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+.banner .banner__image{
+    width: 240px;
+    height: 296px;
+    margin: auto;
+}
+.banner .banner__content{
+    
+}
+.banner .banner__content-title{
+   font-size: 150%;
+    text-align: center;
+}
+.banner .banner__content-info{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.banner .banner__content-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.content-item__line{
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    max-width: 112px;
+}
+ .content-item__icon{
+    font-size: 30px;
+    margin: 0 15px;
+}
+.banner-item{
+    align-items: center;
+}
+/*================portfolio==================*/
+.portfolio{
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.portfolio .portfolio__item{
+    width: 100%;
+    padding-top: 20px;
+}
+.portfolio .portfolio__content-item,.contact .contact__content-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.portfolio .portfolio__title,.contact .contact__title{
+    font-size: 150%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.portfolio .content-item__icon{
+    color: #2c3e50;
+    font-size: 30px;
+    margin: 0 15px;
+}
+.portfolio .content-item__line,.contact .content-item__line{
+    background-color: #2c3e50;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+}
+.portfolio .portfolio__img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.img-control{
+    margin-bottom: 20px;
+    
+}
+
+.row{
+    margin-top: 30px;
+}
+.overlay{
+    background-color: #1abc9c;
+    height: 99%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.overlay i{
+    font-size: 80px;
+    margin: auto;
+    color: #fff;
+}
+.overlay:hover{
+    opacity: 0.9;
+}
+.item{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+/*===============About====================*/
+.about{
+    height: auto;
+    background-color: #1abc9c;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    justify-content: center;
+}
+.about-all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-item{
+    width: 100%;
+    padding-top: 20px;
+}
+.about-item_title{
+    font-size: 148%;
+    text-align: center;
+}
+.about__content-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.about-content{
+    display: flex;
+    justify-content: center;
+
+    width: 70%;
+    height: auto;
+}
+.about .content-item__icon{
+    font-size: 30px;
+    margin: 0 15px;
+}
+.button{
+    align-items: center;
+    margin: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 3px solid white;
+    width: 200px;
+    height: 50px;
+    padding: 28px 16px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.button:hover{
+    background-color: #fff;
+    color:black;
+}
+.btn-active{
+ margin-left: 10px;
+ width: 100%;
+}
+
+.contact{
+    flex-direction: column;
+    height: auto;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.input-text{
+    
+    height: auto;
+    width: 80%;
+    margin: auto;
+
+    padding-top: 50px;
+    
+}
+.form_control{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 25px;
+    padding: 6px 0 30px 10px;
+    
+}
+.send-btn{
+    background-color: #1abc9c;
+    width: 120px;
+    color: #fff;
+    border: 2px solid #1abc9c;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    float: left;
+}
+.contact-send{
+    margin-top: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+/*===============footer===============*/
+.footer{
+    background-color: #2c3e50;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+    display: flex;
+}
+.footer .title{
+    padding-top: 60px;
+    margin-bottom: 15px;
+    font-size: 200%;
+}
+.footer .address{
+    font-size: 20px;
+}
+.footer .social-media{
+    margin-top: 60px;
+    width: 50%;
+    
+}
+.footer .social-media__title{
+    font-size: 175%;
+    padding-bottom:30px ;
+}
+.footer .social-media__icon{
+    display: flex;
+    justify-content: center;
+   
+}
+.footer .social-media__icon .icon{
+    border-radius: 100%;
+    border: 2px solid;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    padding: 6px 12px;
+    color: white;
+    margin: 0px 5px;
+}
+.footer .detail{
+    margin-top: 60px;
+    width: 50%;
+    margin-left: 10px;
+}
+.footer .detail p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+ .copy-right{
+    color: white;
+    height: 76px;
+    background-color: #1a252f;
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 80%;
+}
+
+.footer .about .content-item__line{
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    max-width: 112px;}
+
+
+
+@media screen and (max-width: 411px){
+    .header__top-list{
+        font-size: 63%;
+    }
+    .banner .banner__content-title,.portfolio .portfolio__title,.about .about-item_title,.contact .contact__title{
+        font-size: 120%;
+    }
+}
+@media (max-width:768px){
+    .header .header__top .button-bar{
+        display: block;
+        font-size: 78%;
+        padding: 10px;
+        color: white;
+        background-color: #1abc9c;
+        border: none;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .header .header__top .header__top-list{
+        display: none;
+    }
+    .header .header__top .button-bar i {
+        padding-left: 8px;
+    }
+    .about-content{
+        width: 100%;
+    }
+}
+.mar{
+    margin-bottom: 20px;
+}
+.form_control:focus{
+    outline: none;
+}

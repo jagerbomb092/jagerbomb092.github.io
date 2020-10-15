@@ -1,0 +1,15 @@
+@mixin height($height:auto) {
+    height: $height;
+    width: 100%;
+}
+@mixin pop($kg:700) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: $kg;
+}
+@mixin as($ps:top) {
+    position: absolute;
+    $ps: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}

@@ -1,0 +1,326 @@
+/*
+    Theme Name : Creative
+    Theme Description : 
+        - As a user,I want to watch your porfolio
+        - Technology : HTML,CSS
+    Author: Dinh Tuan Nghia
+    Version : 1.0.0
+*/
+/*
+ ==================== Table of content ====================
+ 1, Setting
+ 2, Header
+*/
+/* ================== Setting ==================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ================== Header ==================== */
+.header-top{
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    opacity: 0.8;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.header-top a{
+    color: #212529;
+    font-size: 15px;
+}
+.header-top .header-top__logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.header-top .header-top__menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+.header-top .header-top__menu li{
+    color: #212529;
+    font-weight: 500;
+}
+.header-top .btn-menu{
+    display: none;
+}
+.header{
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../images/bg-masthead.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header-banner{
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    padding-top: 200px;
+}
+.header-banner h1{
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+}
+.line{
+    border:2px solid #f4623a;
+    width: 86px;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    background-color:  #f4623a;
+}
+.header-banner p{
+    font-weight: 300;
+    width: 62%;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: auto;
+    margin-bottom: 65px;
+}
+.banner-btn{
+    font-weight: 700;
+    background-color: #f4623a;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 32px;
+    border: none;
+    font-size: 13px;
+}
+.banner-btn__line{
+    margin-top: 8%;
+}
+/* ================== About ==================== */
+.about{
+    background-color: #f4623a;
+    height: auto;
+    padding: 120px 0;
+}
+.about-content{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+
+}
+.about-content h2{
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 30px;
+}
+.about-content hr{
+    border:2px solid #fff;
+    width: 86px;
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 1%;
+    background-color: #fff;
+}
+.about-content p{
+    font-weight: 300;
+    width: 62%;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    margin-top: 3%;
+    line-height: 1.5;
+    margin-bottom: 65px;
+}
+.about-btn a{
+    font-weight: 700;
+    background-color: #fff;
+    color: black;
+    margin-top: 5%;
+    padding: 20px 30px;
+    border-radius: 32px;
+    border: none;
+    font-size: 15px;
+}
+.about-btn{
+    margin-top: 5%;
+    height: auto;
+
+}
+/* ================== Service ==================== */
+.service{
+    padding: 50px;
+    height: auto;
+}
+.service-title{
+    text-align: center;
+}
+.service-title h1{
+    font-weight: 500;
+    line-height: 1.5;
+}
+.service .item-control{
+    text-align: center;
+    margin: 20px 0;  
+}
+.service .item-control h2{
+    margin: 5px 0;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 25px;
+}
+.service .item-control p{
+    color: #6c757d;
+    font-size: 15px;
+}
+.service .fa-color{
+    color: #f4623a;
+    
+}
+.service .fa-color::before{
+    font-size: 55px;
+}
+.service .row-control{
+    width: 80%;
+    margin: auto;
+}
+/* ================== Portfolio ==================== */
+.portfolio{
+    width: 100%;
+}
+.img-control img{
+   width: 100%;
+   position: relative;
+}
+.img-hover{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #f4623a;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+}
+.img-hover h1{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+}
+.img-hover p{
+    font-size: 21px;
+    color: #fff;
+}
+.img-hover:hover{
+    opacity: 0.9;
+    transition: 0.25s ;
+    cursor: pointer;
+}
+
+
+/* ================== Download ==================== */
+.download{
+    background-color: #343a40;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+}
+.download-content{
+    
+}
+.download-content h1{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 65px;
+}
+/* ================== Contact ==================== */
+.contact{
+    padding: 120px 0;
+}
+.contact-title{
+    
+}
+.contact-title p{
+    font-weight: 300;
+    width: 62%;
+    text-align: center;
+    font-size: 18px;
+    
+    margin: auto;
+    margin-top: 3%;
+    line-height: 1.5;
+}
+.row-control{
+    text-align: center;
+}
+.row-control i{
+    margin: 30px 0;
+    display: block;
+}
+.row-control i::before{
+    font-size: 55px;
+    color: #6c757d;
+}
+.row-control a{
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    color:  #f4623a;
+    margin: auto;
+    margin-top: 3%;
+    line-height: 1.5;
+    width: 100%;
+}
+.row-control a h5{
+    font-weight: 300;
+}
+/* ================== Footer ==================== */
+.footer{
+    background-color: #f8f9fa;
+     padding: 50px 0;;
+}
+.footer-title{
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+}
+@media screen and (max-width:880px){
+    .header-top .header-top__menu{
+        display: none;
+    }
+    .header-top .btn-menu{
+        display: block;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        width: 15%;
+
+    }
+    .header-banner h1{
+        font-size: 38px;
+    }
+    
+}

@@ -1,0 +1,81 @@
+/*============= About ============*/
+.about{
+    padding: $margin-tb;
+    @include height(auto);
+    background-color:$green;
+    color: $white;
+    &-title{
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        
+        font-family: $monserrat;
+        @media screen and (max-width:991px){
+            font-size: 36px;
+        }
+    }
+    &-item{
+        @include height(auto);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 0;
+        &__line{
+            height: 4px;
+            max-width: 112px;
+            width: 100%;
+            background-color: $white;
+           
+        }
+        &__icon{
+            font-size: 32px;
+        }
+        
+    }
+    &-content{
+        width: 62%;
+        margin: auto;
+        font-family: $lato;
+        font-size: 20px;
+        & p{
+            line-height: 30px;
+        }
+    }
+    &-button{
+        margin-top: 28px;
+        &__active{
+            background-color: transparent;
+            color: $white;
+            font-size: 20px;
+            font-family: $lato;
+            display: flex;
+            align-items: center;
+            padding: 16px 28px;
+            width: 232px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid $white;
+            border-radius: 8px;
+            line-height: 30px;
+            & i{
+                margin-right: 10px;
+            }
+        }
+        &__active:hover{
+            background-color: $white;
+            color: black;
+            transition: 0.25s;
+        }
+    }
+    @media screen and (max-width:991px){
+        &-content{
+            width: 100%;
+            & p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,90 @@
+/*============= Footer ============*/
+.footer{
+    padding: $margin-tb;
+    @include height(auto);
+    color: $white;
+    background-color: $black;
+    text-align: center;
+    @media screen and (max-width:991px){
+        &-control{
+            margin-bottom: 48px;
+        }
+    }
+    &-title{
+        font-family: $monserrat;
+        font-size: 24px;
+        margin-bottom: 24px;
+        margin-top: 20px;
+    }
+    &-info{
+        font-family: $lato;
+        font-size: 20px;
+        line-height: 30px;
+        & a{
+            color: $green;
+        }
+        & a:hover{
+            text-decoration: underline;
+        }
+    }
+    &-icon{
+        @include display(center);
+        & .icon{
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            height: 52px;
+            width: 52px;
+            border: solid 2px $white;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &::before{
+                text-align: center;
+                
+            }
+        }
+        & .no{
+            margin-right: 0;
+        }
+        & .icon:hover{
+            background-color: $white;
+            color: $black;
+        }
+    }
+}
+.copy-right{
+    text-align: center;
+    background-color: #1a252f;
+    padding: 25px 0;
+    color: $white;
+    font-family: $lato;
+    font-size: 13px;
+}
+.ar-up{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 0;
+    height: 0;
+    background-color: black;
+    color: #fff;
+    opacity: 0;
+    @include display(center);
+    border-radius: 8px;
+    transition: opacity 0.4s ease-in-out;
+    overflow: hidden;
+     
+    &.active{
+        opacity: 0.6;
+    }
+}
+@media screen and (max-width:991px){
+    .ar-up{
+        
+        width: 56px;
+        height: 56px;
+    }
+}
