@@ -28,14 +28,14 @@ function scrollMenu(){
 }
 let bannerHeight = document.querySelector(".about")
 var startPoint = window.pageYOffset;
-position = bannerHeight.offsetTop
+let position = bannerHeight.offsetTop
 window.addEventListener("scroll",()=>{
     var scrollPoint = window.pageYOffset;
     var header = document.querySelector(".header");
     if (scrollPoint>position -300) {
         if (scrollPoint > startPoint ) {
             header.classList.add("hide")
-            console.log(startPoint);
+            
         } 
         else {
             header.classList.remove("hide")
@@ -62,3 +62,26 @@ let addAnimation = ()=>{
     img.classList.add('animation')
 }
 addAnimation()
+let number = document.querySelectorAll(".number")
+
+let couterSection = ()=>{
+    height = section[2].offsetTop
+    console.log(height);
+    if(scrollY>height - 300){
+        let couter =()=>{
+            for (let i = 0; i < number.length; i++) {
+                let numbers = number[i];
+                let last = numbers.getAttribute('data-target')
+                let status = parseInt(numbers.innerText)
+                let up = 1
+                if (status<last) {
+                    status = parseInt(status + up)
+                    setTimeout(couter,80)
+                    numbers.innerHTML = status+""+"%"
+                }
+            }
+        }
+        couter ()
+    }
+}
+window.addEventListener("scroll",couterSection)
