@@ -59,7 +59,7 @@ let aniActive = ()=>{
     for (let i = 0; i < section.length; i++) {
         let sections = section[i];
         let positions = sections.offsetTop
-        if (scrollY>positions-300) {
+        if (scrollY>positions-400) {
             sections.classList.add("animation-active")
         }
     }
