@@ -1,3 +1,4 @@
+let St = true
 var menu = {
     init:function(){
         this.show();
@@ -8,7 +9,16 @@ var menu = {
         var menu=document.querySelector(".header-top__menu");
         btn.addEventListener("click",()=>{
             menu.classList.toggle("show");
-            header.classList.toggle("watch");
+            if (St==true) {
+                header.classList.add("watch");
+                header.classList.add("un-hide")
+                return St = false
+            }
+            else{
+                header.classList.remove("watch");
+                header.classList.remove("un-hide")
+                return St = true
+            }
         })
     }
 }

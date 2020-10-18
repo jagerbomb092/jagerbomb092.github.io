@@ -8,16 +8,13 @@
     z-index: 4;
     color: #fff;
     transition: all 0.3s ease-in-out;
-    
     &-top {
-        position: relative;
         display: flex;
         flex-wrap: wrap;
         @include display(space-between);
         margin: auto;
-        
         transition: all 0.3s ease-in-out;
-        
+        position: relative;
         &__logo {
             height: 40px;
             line-height: 40px;
@@ -30,7 +27,6 @@
                 fill: #fff;
             }
         }
-        
         &__btn {
             display: none;
             border: none;
@@ -188,11 +184,19 @@
     &.hide{
         transform: translateY(-75px);
     }
+    &.un-hide{
+        transform: translateY(0px) !important;
+    }
 }
 @media screen and(max-width:991px) {
     .header {
+        
         &.bg{
             & .header-top{
+                & .header-top__logo{
+                    height: 35px;
+                    width: 35px;
+                }
                 & .header-top__link{
                     padding: 0;
                 }
@@ -201,53 +205,63 @@
         }
         &-top {
             padding: 27px 0;
+            position: initial;
+            &__logo{
+                width: 35px;
+                height: 35px;
+            }
             &__menu {
                 flex-direction: column;
-                flex-basis: 100%;
                 max-height: 0vh;
                 overflow: hidden;
                 transition: all ease-in-out 0.3s;
                 background-color: #1b1d1f !important;
                 color: #fff !important;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top:100%;
+                height: auto;
+                display: inline-block;
+                
                 & .header-top__link{
                     padding: 0;
-                    
                     justify-content: left;
                 }
                 :nth-child(1) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                     
                 }
                 :nth-child(2) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
                 :nth-child(3) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
                 :nth-child(4) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
                 :nth-child(5) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
                 :nth-child(6) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
                 :nth-child(7) {
                     font-size: 16px;
-                    margin: 30px 0;
+                    margin: 30px 15px;
                     @include font(600);
                 }
 

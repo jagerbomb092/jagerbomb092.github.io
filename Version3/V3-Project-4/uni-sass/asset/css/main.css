@@ -12,6 +12,11 @@ ul, li {
 a {
   text-decoration: none;
   display: inline-block; }
+  a:focus {
+    outline: none; }
+
+button:focus {
+  outline: none; }
 
 img {
   width: 100%;
@@ -41,14 +46,14 @@ ul {
   color: #fff;
   transition: all 0.3s ease-in-out; }
   .header-top {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    transition: all 0.3s ease-in-out; }
+    transition: all 0.3s ease-in-out;
+    position: relative; }
     .header-top__logo {
       height: 40px;
       line-height: 40px;
@@ -184,56 +189,70 @@ ul {
       fill: #303133; }
   .header.hide {
     transform: translateY(-75px); }
+  .header.un-hide {
+    transform: translateY(0px) !important; }
 
 @media screen and (max-width: 991px) {
+  .header.bg .header-top .header-top__logo {
+    height: 35px;
+    width: 35px; }
   .header.bg .header-top .header-top__link {
     padding: 0; }
   .header-top {
-    padding: 27px 0; }
+    padding: 27px 0;
+    position: initial; }
+    .header-top__logo {
+      width: 35px;
+      height: 35px; }
     .header-top__menu {
       flex-direction: column;
-      flex-basis: 100%;
       max-height: 0vh;
       overflow: hidden;
       transition: all ease-in-out 0.3s;
       background-color: #1b1d1f !important;
-      color: #fff !important; }
+      color: #fff !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      height: auto;
+      display: inline-block; }
       .header-top__menu .header-top__link {
         padding: 0;
         justify-content: left; }
       .header-top__menu :nth-child(1) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(2) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(3) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(4) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(5) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(6) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu :nth-child(7) {
         font-size: 16px;
-        margin: 30px 0;
+        margin: 30px 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 600; }
       .header-top__menu.show {
