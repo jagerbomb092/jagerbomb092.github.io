@@ -76,7 +76,6 @@ let number = document.querySelectorAll(".number")
 
 let couterSection = ()=>{
     height = section[2].offsetTop
-    console.log(height);
     if(scrollY>height - 300){
         let couter =()=>{
             for (let i = 0; i < number.length; i++) {
@@ -95,3 +94,47 @@ let couterSection = ()=>{
     }
 }
 window.addEventListener("scroll",couterSection)
+let trangThai = true
+let linkMenu = document.querySelectorAll(".link-menu")
+let listLink = document.querySelectorAll(".list-link")
+let menuHover = document.querySelectorAll(".menu-hover")
+let MHL =document.querySelectorAll(".menu-hover_list")
+let menuListAt = ()=>{
+    for (let i = 0; i < linkMenu.length; i++) {
+        let linkMenus = linkMenu[i];
+        linkMenus.addEventListener("click",()=>{
+            if(trangThai==true){
+                
+                linkMenus.classList.add("act")
+                menuHover[i].classList.add("add")
+                return trangThai =false
+            }
+            else{
+                linkMenus.classList.remove("act")
+                menuHover[i].classList.remove("add")
+                return trangThai =true
+            }
+        })
+    }
+}
+menuListAt()
+st =true
+let linklistAt = () =>{
+    for (let i = 0; i < listLink.length; i++) {
+        let listLinks = listLink[i];
+        listLinks.addEventListener("click",()=>{
+            if(st==true){
+                
+                listLinks.classList.add("act")
+                MHL[i].classList.add("add")
+                return st =false
+            }
+            else{
+                listLinks.classList.remove("act")
+                MHL[i].classList.remove("add")
+                return st =true
+            }
+        })
+    }
+}
+linklistAt()

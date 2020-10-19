@@ -32,14 +32,73 @@
             display: none;
             border: none;
             background-color: transparent;
-            font-size: 32px;
-            color: #fff;
+            padding: 24px 36px 27px 36px;
+            & .button-menu:active{
+                background-color: transparent;
+                &::before{
+                   
+                }
+                &::after{
+                    background-color: $text-black;
+                    top: 0;
+                    transform: rotate3d(0,0,1,45deg);
+                }
+            }
+            & .button-menu::before:active{
+                background-color: $text-black;
+                top: 0;
+                transform: rotate3d(0,0,1,45deg);
+            }
+            & .button-menu::after:active{
+                background-color: $text-black;
+                top: 0;
+                transform: rotate3d(0,0,1,45deg);
+            }
+            & .button-menu{
+                height: 2px;
+                width: 20px;
+                background-color: #fff;
+                display: inline-block;
+                line-height: 0;
+                border-radius: 5px;
+                position: relative;
+                transition: background 0.3s 0s ease-in-out;
+                
+                
+                &::before{
+                    content: "";
+                    height: 2px;
+                    width: 20px;
+                    background-color: #fff;
+                    display: inline-block;
+                    line-height: 0;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    transition: top 0.3s ease-in-out,transform 0.3s 0.5s ease-in-out;
+                }
+                &::after{
+                    content: "";
+                    height: 2px;
+                    width: 20px;
+                    background-color: #fff;
+                    display: inline-block;
+                    line-height: 0;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                    transition: top 0.3s ease-in-out,transform 0.3s 0.5s ease-in-out;
+                }
+            }
         }
         &__menu {
             display: inline-flex;
             height: 100%;
             justify-content: center;
             align-items: center;
+            
             & .header-top__link{
                 width: 100%;
                 @include display(center);
@@ -48,7 +107,8 @@
                 transition: padding 0.3s ease-in-out;
                 &:hover{
                     .menu-hover{
-                        display: block;
+                        height: auto;
+                        padding: 50px 0;
                     }
                 }
                 & .link-menu{
@@ -57,7 +117,10 @@
                     color: #fff;
                     
                     line-height: normal;
-
+                    & i{
+                        
+                        display: none;
+                    }
                     &:hover{
                         color: rgba(255, 255, 255, 0.5);
                         
@@ -108,9 +171,9 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                padding: 50px 0 ;
                 box-shadow: 0 55px 80px -40px rgba(0,0,0,.45);
-                display: none;
+                height: 0;
+                overflow: hidden;
                 & .hover-list{
                     padding: 0 27px;
                     margin-right: 0px;
@@ -135,11 +198,14 @@
                     }
                     & .list-link{
                         padding: 9 9 14px 9;
-                        font-size: 15px;
+                        font-size: 13px;
                         font-weight: 600;
                         color: #fff;
                         &:hover{
                             color: rgba(255, 255, 255, 0.5);
+                        }
+                        & i{
+                            display: none;
                         }
                     }
                     & .menu-hover_list{
@@ -256,15 +322,46 @@
                     transition: opacity 0.3s ease-out,transform 0.3s ease-out;
                     font-size: 13px;
                     flex-direction: column;
+                    &:hover{
+                        & .menu-hover{
+                            padding: 0;
+                            height: 0;
+                        }
+                    }
                     & .link-menu{
                         padding: 9px 36px ;
                         background-color: #1b1d1f;
+                        
+                        &.act{
+                            & i{
+                                transform: none
+                            }
+                            
+                        }
+                        & i{
+                            display: block;
+                            float: right;
+                            height: 100%;
+                            top: 0.3em;
+                            right: 7px;
+                            color: #fff;
+                            transition: transform 0.3s ease-out;
+                            transform: rotate(-90deg);
+                            
+                        }
                     }
                     & .menu-hover{
                         position: initial;
-                        display: block;
+                        
                         padding: initial;
                         background-color: #1b1d1f;
+                        overflow: hidden;
+                        height: 0;
+                        transition: all 0.3s ease-in;
+                        &.add{
+                            height: 100%;
+                            
+                        }
                         & .hover-list{
                             display: inline-block;
                             width: 100%;
@@ -272,10 +369,28 @@
                                 font-size: 13px;
                                 padding: 9px 36px;
                                 width: 100%;
+                                &.act{
+                                    & i{
+                                        transform: none
+                                    }
+                                    
+                                }
+                                & i{
+                                    float: right;
+                                    top: 0.3em;
+                                    right: 7px;
+                                    color: #fff;
+                                    transition: transform 0.3s ease-out;
+                                    transform: rotate(-90deg);
+                                    display: block;
+                                }
                             }
                             & .menu-hover_list{
-                                // height: 0;
+                                height: 0;
                                 overflow: hidden;
+                                &.add{
+                                    height: 100%;
+                                }
                                 & li{
                                     font-weight: 600;
                                     padding: 9px 36px;
